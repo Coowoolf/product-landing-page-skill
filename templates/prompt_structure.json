@@ -1,0 +1,87 @@
+{
+    "$schema": "Product Landing Page Prompt Template",
+    "$description": "Fill in or remove optional fields. Feed this JSON along with a product image to generate a landing page.",
+    "product": {
+        "name": "auto-detect | string",
+        "model": "auto-detect | string",
+        "category": "auto-detect | string (e.g. 'tube amplifier', 'desk lamp', 'smart watch')",
+        "tagline": "auto-generate | string",
+        "design_philosophy": "auto-generate | string (1-2 sentences)"
+    },
+    "style": {
+        "preset": "rams | apple | muji | bang-olufsen | teenage-engineering | custom",
+        "accent_color": "from-preset | #hex",
+        "font_primary": "from-preset | Google Font name",
+        "font_mono": "JetBrains Mono",
+        "dark_mode": false,
+        "animations": true
+    },
+    "sections": [
+        {
+            "id": "hero",
+            "enabled": true,
+            "layout": "split | centered | full-bleed",
+            "badges": [
+                "auto | custom spec badges, e.g. '100W', '24-bit'"
+            ]
+        },
+        {
+            "id": "philosophy",
+            "enabled": true,
+            "quote": "auto-generate | custom quote"
+        },
+        {
+            "id": "internal-structure",
+            "enabled": true,
+            "style": "isometric-cutaway | exploded-view | cross-section",
+            "components_to_show": "auto-detect from image | ['transformer', 'capacitors', 'PCB', ...]"
+        },
+        {
+            "id": "orthographic-views",
+            "enabled": true,
+            "views": [
+                "front",
+                "side",
+                "top",
+                "isometric"
+            ],
+            "show_dimensions": true,
+            "dimension_unit": "mm"
+        },
+        {
+            "id": "app-control",
+            "enabled": "auto (true for electronics, false for non-connected products)",
+            "screens": [
+                {
+                    "name": "Main Control",
+                    "key_element": "big metric display (volume, temperature, etc.)"
+                },
+                {
+                    "name": "Analytics",
+                    "key_element": "charts, spectrum, real-time data"
+                },
+                {
+                    "name": "Settings",
+                    "key_element": "sliders, toggles, firmware info"
+                }
+            ]
+        },
+        {
+            "id": "features",
+            "enabled": true,
+            "count": 4,
+            "features": "auto-generate based on product analysis | [{ name, description, specs }]"
+        },
+        {
+            "id": "specifications",
+            "enabled": true,
+            "categories": "auto-generate | ['Audio Performance', 'Input/Output', 'Physical']",
+            "show_package_drawing": true
+        }
+    ],
+    "output": {
+        "filename": "auto | custom-filename.html",
+        "embed_product_image": "base64 | relative-path",
+        "responsive": true
+    }
+}
