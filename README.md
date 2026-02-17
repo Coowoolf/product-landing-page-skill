@@ -31,6 +31,15 @@ All sections are fully responsive and use inline SVG — no external dependencie
 
 Generated from a single speaker photo using the `rams` (Dieter Rams) style preset:
 
+### Input — one product photo:
+
+<p align="center">
+  <img src="demo/aether-m1-official-product.png" alt="Input: raw product photo" width="360">
+</p>
+<p align="center"><em>That's it. One photo. The AI agent generates everything else.</em></p>
+
+### Output — complete landing page:
+
 <p align="center">
   <img src="demo/screenshot-hero.png" alt="Hero & Philosophy Section" width="800">
 </p>
